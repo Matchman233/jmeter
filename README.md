@@ -16,29 +16,26 @@
 
 1. ./${JMETER_HOME}/bin/jemter 打开可视化编辑页面
 2.	设置 线程数，循环次数。
-![图片](http://agroup-bos.cdn.bcebos.com/f664634bc19e135e7cf72e38b859ab9ea34487cb)
-![图片](http://agroup-bos.cdn.bcebos.com/0dbf3aad4ba1cfb539c4c86891d2de17ced66923)
+![图片](http://agroup-bos.cdn.bcebos.com/f664634bc19e135e7cf72e38b859ab9ea34487cb)![图片](http://agroup-bos.cdn.bcebos.com/0dbf3aad4ba1cfb539c4c86891d2de17ced66923)
 3.	选择压测脚本
-
 ![图片](http://agroup-bos.cdn.bcebos.com/bebce6ad699bca18235e9beb8ab632824b8ec642)
 4. 初始化参数
-
 ![图片](http://agroup-bos.cdn.bcebos.com/4146f3d1f4f89d9fcdfeafd478e775084d01df6b)
 5.其他参数。例如生成聚合报告
-
 ![图片](http://agroup-bos.cdn.bcebos.com/2e631bd70dc72a5de4e01c753fef2376a0daa1ee)
 6. 点击保存按钮，生成测试计划。**请选择英文。中文模式下可能会导致执行计划出错**。然后点击开始按钮。开始执行测试计划。
 ![图片](http://agroup-bos.cdn.bcebos.com/452ea37a813278c0568f0f63f3fea7902e36ccec)
 
 **Non GUI模式**
 1. 编写测试脚本jmx文件 参考 https://my.oschina.net/u/1241970/blog/635522。如有疑问，可以查看**GUI模式**下生成的执行计划。
-7. nohup ${JMETER_HOME}/bin/jmeter -n -t test.jmx -l result.out -e -o webreport > log 2>&1 &
+2. nohup ${JMETER_HOME}/bin/jmeter -n -t test.jmx -l result.out -e -o webreport > log 2>&1 &
    - -t 指定jmx测试脚本
    - -l 指定输出结果路径
    - -o 指定web界面的报告输出路径
-8. 可以在测试结束后，将webreport文件夹下载到本地，使用浏览器打开，查看可视化的压测结果。
-
-
-
+![图片](http://agroup-bos.cdn.bcebos.com/25d4d1f689afdd4326221eeffc521ff519adf374)
+3. 可以在测试结束后，将webreport文件夹下载到本地，使用浏览器打开，查看可视化的压测结果。
+![图片](http://agroup-bos.cdn.bcebos.com/77d706ff9a23abe80e791b85ab28f619bfbc9d1b)
+4. demo结果样例
+https://pan.baidu.com/s/1LTn2ZJd8o0-CI7QWn9rF0g
 **其他**
 1.如果需要预先处理数据，然后执行计划。请google jmeter前置处理器。
